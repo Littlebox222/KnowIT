@@ -18,6 +18,8 @@
 		50D05D021E2D0B2E00CD19A6 /* UIColor+KTExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D05D011E2D0B2E00CD19A6 /* UIColor+KTExt.m */; };
 		50D05D081E2D0B9400CD19A6 /* KTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D05D051E2D0B9400CD19A6 /* KTNavigationController.m */; };
 		50D05D091E2D0B9400CD19A6 /* KTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D05D071E2D0B9400CD19A6 /* KTViewController.m */; };
+		50D05D131E2D2A9D00CD19A6 /* KTChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D05D121E2D2A9D00CD19A6 /* KTChatInputView.m */; };
+		50D05D171E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D05D161E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		50D05D051E2D0B9400CD19A6 /* KTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTNavigationController.m; sourceTree = "<group>"; };
 		50D05D061E2D0B9400CD19A6 /* KTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTViewController.h; sourceTree = "<group>"; };
 		50D05D071E2D0B9400CD19A6 /* KTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewController.m; sourceTree = "<group>"; };
+		50D05D111E2D2A9D00CD19A6 /* KTChatInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTChatInputView.h; path = Client/Chat/Input/KTChatInputView.h; sourceTree = "<group>"; };
+		50D05D121E2D2A9D00CD19A6 /* KTChatInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTChatInputView.m; path = Client/Chat/Input/KTChatInputView.m; sourceTree = "<group>"; };
+		50D05D151E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMessageBaseCellTableViewCell.h; sourceTree = "<group>"; };
+		50D05D161E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMessageBaseCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 			children = (
 				50A22A921E2B83AB00146328 /* KTChatViewController.h */,
 				50A22A931E2B83AB00146328 /* KTChatViewController.m */,
+				50D05D141E2D347700CD19A6 /* Cell */,
+				50D05D0D1E2D2A5400CD19A6 /* Input */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -195,6 +203,25 @@
 			path = General/UI;
 			sourceTree = "<group>";
 		};
+		50D05D0D1E2D2A5400CD19A6 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				50D05D111E2D2A9D00CD19A6 /* KTChatInputView.h */,
+				50D05D121E2D2A9D00CD19A6 /* KTChatInputView.m */,
+			);
+			name = Input;
+			sourceTree = "<group>";
+		};
+		50D05D141E2D347700CD19A6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				50D05D151E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.h */,
+				50D05D161E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.m */,
+			);
+			name = Cell;
+			path = Client/Chat/Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,12 +296,14 @@
 			files = (
 				50A22A8D1E2B7F2300146328 /* KTConfig.m in Sources */,
 				50D05CE91E2AAA3E00CD19A6 /* AppDelegate.m in Sources */,
+				50D05D171E2D34BE00CD19A6 /* KTMessageBaseCellTableViewCell.m in Sources */,
 				50D05D021E2D0B2E00CD19A6 /* UIColor+KTExt.m in Sources */,
 				50D05D091E2D0B9400CD19A6 /* KTViewController.m in Sources */,
 				50D05CE61E2AAA3E00CD19A6 /* main.m in Sources */,
 				50A22A861E2B7AAC00146328 /* KTMainVeiwController.m in Sources */,
 				50D05D081E2D0B9400CD19A6 /* KTNavigationController.m in Sources */,
 				50A22A941E2B83AB00146328 /* KTChatViewController.m in Sources */,
+				50D05D131E2D2A9D00CD19A6 /* KTChatInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

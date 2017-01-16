@@ -8,9 +8,12 @@
 
 #import "KTChatViewController.h"
 #import "KTConfig.h"
-#import "UIColor+KTExt.h"
+#import "KTChatInputView.h"
 
-@interface KTChatViewController ()
+@interface KTChatViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) KTChatInputView *inputView;
 
 @end
 
@@ -19,29 +22,72 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor randomColor];
-    self.title = VC_TITLE_CHAT;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
+    self.view.backgroundColor = VC_BACKGROUNDCOLOR;
+    self.title = VC_CHAT_TITLE;
     
-    [super viewWillAppear:animated];
-    self.navigationController.navigationBar.translucent = NO;
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:VC_CHAT_NAVIGATIONBAR_BUTTON_RIGHT style:UIBarButtonItemStylePlain target:self action:@selector(notification)];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:VC_CHAT_NAVIGATIONBAR_BUTTON_LEFT style:UIBarButtonItemStylePlain target:self action:@selector(userInfo)];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backItem;
+    
+    CGRect inputFrame = CGRectMake(0, self.view.frame.size.height - VC_NAVIGATIONBAR_HEIGHT - STATUSBAR_HEIGHT - VC_CHAT_INPUTVIEW_HEIGHT, self.view.frame.size.width, VC_CHAT_INPUTVIEW_HEIGHT);
+    self.inputView = [[KTChatInputView alloc] initWithFrame:inputFrame];
+    [self.view addSubview:self.inputView];
+    
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - VC_NAVIGATIONBAR_HEIGHT - STATUSBAR_HEIGHT - VC_CHAT_INPUTVIEW_HEIGHT);
+    self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
+    self.tableView.backgroundColor = VC_TABLEVIEW_BACKGROUNDCOLOR;
+    self.tableView.contentInset = UIEdgeInsetsZero;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)notification {
+    NSLog(@"notification");
 }
-*/
+
+- (void)userInfo {
+    NSLog(@"userInfo");
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 30;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return VC_TABLEVIEW_CELL_HEIGHT;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"知识消息%ld", (long)indexPath.row+1];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"%ld", (long)indexPath.row);
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 @end
