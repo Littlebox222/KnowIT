@@ -7,6 +7,8 @@
 //
 
 #import "KTChatViewController.h"
+#import "KTConfig.h"
+#import "UIColor+KTExt.h"
 
 @interface KTChatViewController ()
 
@@ -16,7 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor randomColor];
+    self.title = VC_TITLE_CHAT;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning {

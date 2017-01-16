@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KTNavigationController.h"
+#import "KTChatViewController.h"
 
 @interface KTMainVeiwController : KTNavigationController
 

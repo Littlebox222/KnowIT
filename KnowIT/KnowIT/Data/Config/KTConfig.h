@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+
+#pragma mark - 通用字符配置 -
+#define VC_TITLE_CHAT @"知然"
+
+
+#pragma mark -
 @interface KTConfig : NSObject
 
 @end
