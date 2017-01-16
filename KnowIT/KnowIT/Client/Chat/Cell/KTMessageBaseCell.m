@@ -1,14 +1,14 @@
 //
-//  KTMessageBaseCellTableViewCell.m
+//  KTMessageBaseCell.m
 //  KnowIT
 //
 //  Created by Little Box on 17/01/2017.
 //  Copyright © 2017 Little Box. All rights reserved.
 //
 
-#import "KTMessageBaseCellTableViewCell.h"
+#import "KTMessageBaseCell.h"
 
-@implementation KTMessageBaseCellTableViewCell
+@implementation KTMessageBaseCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,3 +22,7 @@
 }
 
 @end
+
+#pragma mark - 布局 -
+#pragma mark - 手势 -
+#pragma mark - 弹出菜单 -
