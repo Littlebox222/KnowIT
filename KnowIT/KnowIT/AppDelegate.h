@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KTMainVeiwController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) KTMainVeiwController *mainViewController;
 
 @end
 
