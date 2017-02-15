@@ -13,8 +13,8 @@
 //Avatar与SuperView之间的约束
 #define AVATAR_SUPER_LEFT       10
 #define AVATAR_SUPER_TOP        0
-#define AVATAR_SUPER_WIDTH      45
-#define AVATAR_SUPER_HEIGHT     45
+#define AVATAR_WIDTH            45
+#define AVATAR_HEIGHT           45
 
 //Bubble上下左右的留白
 #define BUBBLE_BLANK_LEFT       7
@@ -35,15 +35,15 @@
 
 extern BOOL KTMessageCellIsEditing;
 
-extern UIImage *receiverTextNodeBkg;
-extern UIImage *receiverTextNodeBkgHL;
-extern UIImage *senderTextNodeBkg;
-extern UIImage *senderTextNodeBkgHL;
+extern UIImage *ReceiverTextNodeBkg;
+extern UIImage *ReceiverTextNodeBkgHL;
+extern UIImage *SenderTextNodeBkg;
+extern UIImage *SenderTextNodeBkgHL;
 
-extern UIImage *receiverImageNodeBorder;
-extern UIImage *receiverImageNodeMask;
-extern UIImage *senderImageNodeBorder;
-extern UIImage *senderImageNodeMask;
+extern UIImage *ReceiverImageNodeBorder;
+extern UIImage *ReceiverImageNodeMask;
+extern UIImage *SenderImageNodeBorder;
+extern UIImage *SenderImageNodeMask;
 
 #define HIDE_STATUS_BUTTON _statusButton.hidden = YES
 #define SHOW_STATUS_BUTTON _statusButton.hidden = NO
@@ -57,13 +57,14 @@ extern UIImage *senderImageNodeMask;
     UIButton *_statusButton;
     UIImageView *_selectControl;
     
-    UITapGestureRecognizer *tap;
-    UILongPressGestureRecognizer *longPressGR;
+    UITapGestureRecognizer *_tap;
+    UILongPressGestureRecognizer *_longPressGR;
     
     KTMessageModel *_messageModel;
 }
 
 @property (nonatomic, strong) KTMessageModel *messageModel;
+
 @property (nonatomic, strong) UIImageView *avatarImage;
 @property (nonatomic, strong) UIImageView *bubbleImage;
 

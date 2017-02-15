@@ -10,4 +10,6 @@
 
 @interface KTMessageModel : NSObject
 
+@property (nonatomic, getter=isFromMe) BOOL fromMe;
+
 @end
