@@ -28,6 +28,9 @@
 #define VC_TABLEVIEW_CELL_HEIGHT 45
 #define VC_CHAT_INPUTVIEW_HEIGHT 55
 
+#pragma mark - 时间配置 -
+#define DEFAULT_DURATION 0.25       //默认动画时间，单位秒
+
 #pragma mark -
 @interface KTConfig : NSObject
 

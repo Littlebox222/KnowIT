@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505D541D1E55A7A9004D24CF /* KTType.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D541C1E55A7A9004D24CF /* KTType.m */; };
+		505D54201E55AAA4004D24CF /* KTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D541F1E55AAA4004D24CF /* KTError.m */; };
 		50A22A861E2B7AAC00146328 /* KTMainVeiwController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A851E2B7AAC00146328 /* KTMainVeiwController.m */; };
 		50A22A8D1E2B7F2300146328 /* KTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A8C1E2B7F2300146328 /* KTConfig.m */; };
 		50A22A941E2B83AB00146328 /* KTChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A931E2B83AB00146328 /* KTChatViewController.m */; };
@@ -27,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505D541B1E55A7A9004D24CF /* KTType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTType.h; path = General/Utility/KTType.h; sourceTree = "<group>"; };
+		505D541C1E55A7A9004D24CF /* KTType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTType.m; path = General/Utility/KTType.m; sourceTree = "<group>"; };
+		505D541E1E55AAA4004D24CF /* KTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTError.h; path = General/Utility/KTError.h; sourceTree = "<group>"; };
+		505D541F1E55AAA4004D24CF /* KTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTError.m; path = General/Utility/KTError.m; sourceTree = "<group>"; };
+		505D54241E55ABA8004D24CF /* KTErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTErrorCode.h; path = General/Utility/KTErrorCode.h; sourceTree = "<group>"; };
 		50A22A831E2B79EF00146328 /* KTColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTColors.h; path = General/Utility/KTColors.h; sourceTree = "<group>"; };
 		50A22A841E2B7AAC00146328 /* KTMainVeiwController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTMainVeiwController.h; path = Client/KTMainVeiwController.h; sourceTree = "<group>"; };
 		50A22A851E2B7AAC00146328 /* KTMainVeiwController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTMainVeiwController.m; path = Client/KTMainVeiwController.m; sourceTree = "<group>"; };
@@ -87,6 +94,11 @@
 				50A22A831E2B79EF00146328 /* KTColors.h */,
 				50A22A991E35F35400146328 /* KTUtils+CGHelper.h */,
 				50A22A9A1E35F35400146328 /* KTUtils+CGHelper.m */,
+				505D541B1E55A7A9004D24CF /* KTType.h */,
+				505D541C1E55A7A9004D24CF /* KTType.m */,
+				505D541E1E55AAA4004D24CF /* KTError.h */,
+				505D541F1E55AAA4004D24CF /* KTError.m */,
+				505D54241E55ABA8004D24CF /* KTErrorCode.h */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -332,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A22A8D1E2B7F2300146328 /* KTConfig.m in Sources */,
+				505D541D1E55A7A9004D24CF /* KTType.m in Sources */,
 				50A22A9B1E35F35400146328 /* KTUtils+CGHelper.m in Sources */,
 				50D05CE91E2AAA3E00CD19A6 /* AppDelegate.m in Sources */,
 				50A22A971E35A0DF00146328 /* UIImage+KTExt.m in Sources */,
@@ -343,6 +356,7 @@
 				50A22A861E2B7AAC00146328 /* KTMainVeiwController.m in Sources */,
 				50D05D081E2D0B9400CD19A6 /* KTNavigationController.m in Sources */,
 				50A22A941E2B83AB00146328 /* KTChatViewController.m in Sources */,
+				505D54201E55AAA4004D24CF /* KTError.m in Sources */,
 				50A22A9E1E35F3AE00146328 /* KTUtils.m in Sources */,
 				50D05D131E2D2A9D00CD19A6 /* KTChatInputView.m in Sources */,
 			);
