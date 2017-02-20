@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		505D541D1E55A7A9004D24CF /* KTType.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D541C1E55A7A9004D24CF /* KTType.m */; };
 		505D54201E55AAA4004D24CF /* KTError.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D541F1E55AAA4004D24CF /* KTError.m */; };
+		505D542A1E5AE062004D24CF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 505D54261E5AE062004D24CF /* LICENSE */; };
+		505D542B1E5AE062004D24CF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D54281E5AE062004D24CF /* MBProgressHUD.m */; };
+		505D542C1E5AE062004D24CF /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 505D54291E5AE062004D24CF /* README.mdown */; };
+		505D54321E5AE0DA004D24CF /* KTUtils+Popover.m in Sources */ = {isa = PBXBuildFile; fileRef = 505D54311E5AE0DA004D24CF /* KTUtils+Popover.m */; };
 		50A22A861E2B7AAC00146328 /* KTMainVeiwController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A851E2B7AAC00146328 /* KTMainVeiwController.m */; };
 		50A22A8D1E2B7F2300146328 /* KTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A8C1E2B7F2300146328 /* KTConfig.m */; };
 		50A22A941E2B83AB00146328 /* KTChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A22A931E2B83AB00146328 /* KTChatViewController.m */; };
@@ -34,6 +38,12 @@
 		505D541E1E55AAA4004D24CF /* KTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTError.h; path = General/Utility/KTError.h; sourceTree = "<group>"; };
 		505D541F1E55AAA4004D24CF /* KTError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTError.m; path = General/Utility/KTError.m; sourceTree = "<group>"; };
 		505D54241E55ABA8004D24CF /* KTErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTErrorCode.h; path = General/Utility/KTErrorCode.h; sourceTree = "<group>"; };
+		505D54261E5AE062004D24CF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		505D54271E5AE062004D24CF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		505D54281E5AE062004D24CF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		505D54291E5AE062004D24CF /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		505D54301E5AE0DA004D24CF /* KTUtils+Popover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "KTUtils+Popover.h"; path = "General/Utility/KTUtils+Popover.h"; sourceTree = "<group>"; };
+		505D54311E5AE0DA004D24CF /* KTUtils+Popover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "KTUtils+Popover.m"; path = "General/Utility/KTUtils+Popover.m"; sourceTree = "<group>"; };
 		50A22A831E2B79EF00146328 /* KTColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTColors.h; path = General/Utility/KTColors.h; sourceTree = "<group>"; };
 		50A22A841E2B7AAC00146328 /* KTMainVeiwController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTMainVeiwController.h; path = Client/KTMainVeiwController.h; sourceTree = "<group>"; };
 		50A22A851E2B7AAC00146328 /* KTMainVeiwController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTMainVeiwController.m; path = Client/KTMainVeiwController.m; sourceTree = "<group>"; };
@@ -84,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		505D54251E5AE062004D24CF /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				505D54261E5AE062004D24CF /* LICENSE */,
+				505D54271E5AE062004D24CF /* MBProgressHUD.h */,
+				505D54281E5AE062004D24CF /* MBProgressHUD.m */,
+				505D54291E5AE062004D24CF /* README.mdown */,
+			);
+			name = MBProgressHUD;
+			path = General/ThirdParty/MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		50A22A7E1E2B75C300146328 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 				505D541E1E55AAA4004D24CF /* KTError.h */,
 				505D541F1E55AAA4004D24CF /* KTError.m */,
 				505D54241E55ABA8004D24CF /* KTErrorCode.h */,
+				505D54301E5AE0DA004D24CF /* KTUtils+Popover.h */,
+				505D54311E5AE0DA004D24CF /* KTUtils+Popover.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -106,6 +130,7 @@
 		50A22A801E2B762500146328 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				505D54251E5AE062004D24CF /* MBProgressHUD */,
 			);
 			name = ThirdParty;
 			sourceTree = "<group>";
@@ -332,6 +357,7 @@
 			files = (
 				50D05CF41E2AAA3E00CD19A6 /* LaunchScreen.storyboard in Resources */,
 				50D05CF11E2AAA3E00CD19A6 /* Assets.xcassets in Resources */,
+				505D542A1E5AE062004D24CF /* LICENSE in Resources */,
 				50D05CEF1E2AAA3E00CD19A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,11 +376,14 @@
 				50A22A971E35A0DF00146328 /* UIImage+KTExt.m in Sources */,
 				50D05D171E2D34BE00CD19A6 /* KTMessageBaseCell.m in Sources */,
 				50D05D021E2D0B2E00CD19A6 /* UIColor+KTExt.m in Sources */,
+				505D542B1E5AE062004D24CF /* MBProgressHUD.m in Sources */,
 				50D05D091E2D0B9400CD19A6 /* KTViewController.m in Sources */,
+				505D542C1E5AE062004D24CF /* README.mdown in Sources */,
 				50D05CE61E2AAA3E00CD19A6 /* main.m in Sources */,
 				50D05D1B1E2D41CC00CD19A6 /* KTMessageModel.m in Sources */,
 				50A22A861E2B7AAC00146328 /* KTMainVeiwController.m in Sources */,
 				50D05D081E2D0B9400CD19A6 /* KTNavigationController.m in Sources */,
+				505D54321E5AE0DA004D24CF /* KTUtils+Popover.m in Sources */,
 				50A22A941E2B83AB00146328 /* KTChatViewController.m in Sources */,
 				505D54201E55AAA4004D24CF /* KTError.m in Sources */,
 				50A22A9E1E35F3AE00146328 /* KTUtils.m in Sources */,
